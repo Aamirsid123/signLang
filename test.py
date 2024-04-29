@@ -12,7 +12,7 @@ imgSize = 300
 offset = 20
 counter = 0
 labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]
-folder = "Photo/L"
+folder = "Photo/R"
 while True:
     success, img = cap.read()
     hands, img = detector.findHands(img)
