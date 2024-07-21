@@ -7,7 +7,7 @@ from cvzone.HandTrackingModule import HandDetector
 import os
 import cv2
 import numpy as np
-import math
+#import math
 
 # for any laptop
 # model = tf.keras.models.load_model(os.path.join('model', 'model.keras'))
@@ -16,8 +16,6 @@ import math
 
 model = tf.keras.models.load_model(os.path.join('model', 'model.keras'), compile=False)
 model.compile(optimizer='adamax', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-
-
 
 class_mapping = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                  'U', 'V', 'W', 'X', 'Y', 'Z', 'del', 'nothing', 'space']
@@ -126,7 +124,6 @@ while True:
 #          counter += 1
 #          cv2.imwrite(f'{folder}/Image_{time.time()}.jpg',imgWhite)
 #          print(counter)
-
 
 
 # import tensorflow as tf
